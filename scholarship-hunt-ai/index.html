@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarship Hunt by AI | Premium AI Guidance</title>
+    <!-- Fonts: Inter & Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-light">
+    <!-- Decorative Glowing Orbs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass">
+        <div class="container nav-content">
+            <a href="#" class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <span class="logo-text">ScholarAI</span>
+            </a>
+            <div class="nav-links desktop-only">
+                <a href="#framework" class="nav-link">Framework</a>
+                <a href="#prompt-library" class="nav-link">Prompts</a>
+                <a href="#ai-chatbot" class="nav-link">Chatbot</a>
+                <a href="#tracker" class="nav-link">Tracker</a>
+                <a href="#resources-templates" class="nav-link">Resources</a>
+            </div>
+            <div class="nav-controls">
+                <button id="theme-toggle" class="btn btn-icon" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon dark-icon"></i>
+                    <i class="fa-solid fa-sun light-icon" style="display: none;"></i>
+                </button>
+                <button id="mobile-menu-btn" class="btn btn-icon mobile-only" aria-label="Menu">
+                    <i class="fa-solid fa-bars menu-icon"></i>
+                    <i class="fa-solid fa-times close-icon" style="display:none;"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Dropdown -->
+        <div class="mobile-menu glass" id="mobile-menu">
+            <a href="#framework" class="mobile-link">Framework</a>
+            <a href="#prompt-library" class="mobile-link">Prompts</a>
+            <a href="#ai-chatbot" class="mobile-link">Chatbot</a>
+            <a href="#tracker" class="mobile-link">Tracker</a>
+            <a href="#resources-templates" class="mobile-link">Resources</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="container hero-content reveal fade-up">
+            <div class="badge-pill">
+                <span class="badge-dot"></span> AI-Powered Guidance System
+            </div>
+            <h1 class="main-title">Win Your Dream Scholarship<br>with <span class="gradient-text">ScholarAI</span></h1>
+            <p class="subtitle">A structurally proven, multi-step roadmap combining AI precision with expert strategies to secure fully-funded master's and PhD programs worldwide.</p>
+            <div class="hero-actions">
+                <a href="#framework" class="btn btn-primary btn-lg pulse-hover shadow-glow">Start Journey <i class="fa-solid fa-arrow-right ml-2"></i></a>
+                <a href="#resources-templates" class="btn btn-glass btn-lg">View Templates</a>
+            </div>
+            <div class="quote-container glass mt-6">
+                <p class="quote">"Whoever goes out seeking knowledge, then he is in Allah's cause until he returns."</p>
+                <span class="quote-author">— Prophet Muhammad (ﷺ)</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Global Progress Roadmap -->
+    <section class="roadmap-section reveal fade-up" id="roadmap-visual">
+        <div class="container">
+            <div class="glass-card p-6 roadmap-card">
+                <div class="progress-container">
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" id="global-progress"></div>
+                    </div>
+                    <div class="progress-steps flex-between">
+                        <div class="step" data-step="1" id="stepIndicator-1">
+                            <div class="step-icon glass-icon"><i class="fa-solid fa-user"></i></div>
+                            <span>Profile</span>
+                        </div>
+                        <div class="step" data-step="2" id="stepIndicator-2">
+                            <div class="step-icon glass-icon"><i class="fa-solid fa-file-alt"></i></div>
+                            <span>Documents</span>
+                        </div>
+                        <div class="step" data-step="3" id="stepIndicator-3">
+                            <div class="step-icon glass-icon"><i class="fa-solid fa-paper-plane"></i></div>
+                            <span>Applications</span>
+                        </div>
+                        <div class="step" data-step="4" id="stepIndicator-4">
+                            <div class="step-icon glass-icon"><i class="fa-solid fa-comments"></i></div>
+                            <span>Interviews</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Step 1: Framework Multi-Step Form -->
+    <section id="framework" class="section">
+        <div class="container reveal fade-up">
+            <div class="section-header">
+                <h2 class="section-title">Step 1: The ScholarAI Framework</h2>
+                <p class="section-desc">Complete your profile to structure your application journey. Progress is automatically preserved on your device.</p>
+            </div>
+            
+            <div class="glass-card framework-wrapper p-6">
+                <!-- Nav tabs for stepper -->
+                <div class="form-tabs flex-between">
+                    <div class="form-tab active" data-target="0"><span>1.</span> Profile</div>
+                    <div class="form-tab" data-target="1"><span>2.</span> Destination</div>
+                    <div class="form-tab" data-target="2"><span>3.</span> Criteria</div>
+                    <div class="form-tab" data-target="3"><span>4.</span> Assets</div>
+                </div>
+                <div class="form-progress"><div class="form-progress-bar" id="stepper-progress"></div></div>
+
+                <form id="scholarship-form" class="mt-5">
+                    <!-- Slide 0: Profile -->
+                    <div class="form-slide active" id="slide-0">
+                        <h3 class="slide-title mb-4">Basic Profile</h3>
+                        <div class="grid-2">
+                            <div class="input-group">
+                                <label for="userName">Full Name</label>
+                                <input type="text" id="userName" class="glass-input" placeholder="e.g. John Doe">
+                            </div>
+                            <div class="input-group">
+                                <label for="fieldOfStudy">Field of Study</label>
+                                <input type="text" id="fieldOfStudy" class="glass-input" placeholder="e.g. Computer Science">
+                            </div>
+                            <div class="input-group">
+                                <label for="userGpa">GPA</label>
+                                <input type="text" id="userGpa" class="glass-input" placeholder="e.g. 3.8/4.0">
+                            </div>
+                            <div class="input-group">
+                                <label for="achievements">Key Achievements</label>
+                                <input type="text" id="achievements" class="glass-input" placeholder="e.g. 1 Publication, Dean's List">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 1: Country -->
+                    <div class="form-slide" id="slide-1">
+                        <h3 class="slide-title mb-4">Target Destination</h3>
+                        <div class="input-group">
+                            <label for="targetCountry">Where do you want to study?</label>
+                            <div class="select-wrapper">
+                                <select id="targetCountry" class="glass-input">
+                                    <option value="" disabled selected>Select a country</option>
+                                    <option value="USA">USA</option>
+                                    <option value="UK">UK</option>
+                                    <option value="Germany">Germany</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="Australia">Australia</option>
+                                    <option value="Japan">Japan</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <i class="fa-solid fa-chevron-down select-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: Filters -->
+                    <div class="form-slide" id="slide-2">
+                        <h3 class="slide-title mb-4">Eligibility Status</h3>
+                        <div class="eligibility-grid">
+                            <label class="custom-checkbox">
+                                <input type="checkbox" id="reqFinNeed">
+                                <div class="checkbox-box"><i class="fa-solid fa-check"></i></div>
+                                <span>Financial Need Based</span>
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" id="reqMerit">
+                                <div class="checkbox-box"><i class="fa-solid fa-check"></i></div>
+                                <span>Merit Based (Excellence)</span>
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" id="reqGpaCheck">
+                                <div class="checkbox-box"><i class="fa-solid fa-check"></i></div>
+                                <span>Meets KPI / GPA Requirement</span>
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" id="reqEnglish">
+                                <div class="checkbox-box"><i class="fa-solid fa-check"></i></div>
+                                <span>Valid English Test (IELTS/TOEFL)</span>
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" id="reqGre">
+                                <div class="checkbox-box"><i class="fa-solid fa-check"></i></div>
+                                <span>Valid GRE/GMAT</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Docs -->
+                    <div class="form-slide" id="slide-3">
+                        <h3 class="slide-title mb-4">Document Readiness</h3>
+                        <div class="grid-2">
+                            <div class="doc-item">
+                                <label>CV / Resume</label>
+                                <div class="select-wrapper"><select id="statusCV" class="glass-input"><option value="Not Ready">Not Ready</option><option value="Ready">Ready</option></select><i class="fa-solid fa-chevron-down select-icon"></i></div>
+                            </div>
+                            <div class="doc-item">
+                                <label>Statement of Purpose (SOP)</label>
+                                <div class="select-wrapper"><select id="statusSOP" class="glass-input"><option value="Not Ready">Not Ready</option><option value="Ready">Ready</option></select><i class="fa-solid fa-chevron-down select-icon"></i></div>
+                            </div>
+                            <div class="doc-item">
+                                <label>Letter of Recommendation</label>
+                                <div class="select-wrapper"><select id="statusLOR" class="glass-input"><option value="Not Ready">Not Ready</option><option value="Ready">Ready</option></select><i class="fa-solid fa-chevron-down select-icon"></i></div>
+                            </div>
+                            <div class="doc-item">
+                                <label>Academic Transcripts</label>
+                                <div class="select-wrapper"><select id="statusTrans" class="glass-input"><option value="Not Ready">Not Ready</option><option value="Ready">Ready</option></select><i class="fa-solid fa-chevron-down select-icon"></i></div>
+                            </div>
+                            <div class="doc-item">
+                                <label>Interview Readiness</label>
+                                <div class="select-wrapper"><select id="statusInterview" class="glass-input"><option value="Not Ready">Not Ready</option><option value="Ready">Ready</option></select><i class="fa-solid fa-chevron-down select-icon"></i></div>
+                            </div>
+                            <div class="doc-item">
+                                <label>Professor Outreach</label>
+                                <div class="select-wrapper"><select id="statusEmail" class="glass-input"><option value="Not Ready">Not Ready</option><option value="Ready">Ready</option></select><i class="fa-solid fa-chevron-down select-icon"></i></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form Controls -->
+                    <div class="form-actions-stepper flex-between mt-5 pt-4 border-top">
+                        <button type="button" class="btn btn-outline" id="btn-prev" style="visibility:hidden;"><i class="fa-solid fa-arrow-left mr-2"></i> Back</button>
+                        <button type="button" class="btn btn-primary gradient-btn shadow-glow" id="btn-next">Next <i class="fa-solid fa-arrow-right ml-2"></i></button>
+                        <button type="button" class="btn btn-primary gradient-btn pulse-hover shadow-glow" id="btn-save" style="display:none;"><i class="fa-solid fa-save mr-2"></i> Save Profile</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Step 2: Prompt Library -->
+    <section id="prompt-library" class="section bg-alt-grad">
+        <div class="container reveal fade-up">
+             <div class="section-header">
+                <h2 class="section-title">Step 2: AI Prompt Library</h2>
+                <p class="section-desc">Instantly optimize your AI interactions. Click to copy these strictly engineered prompts for ChatGPT or Claude.</p>
+            </div>
+            
+            <div class="filter-controls flex-center mb-5">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="discovery">Discovery</button>
+                <button class="filter-btn" data-filter="documents">Documents</button>
+                <button class="filter-btn" data-filter="outreach">Outreach & Interview</button>
+            </div>
+
+            <div class="grid-3 prompt-grid" id="prompt-container">
+                <div class="glass-card prompt-card fancy-hover" data-category="discovery">
+                    <span class="category-badge badge-discovery">Discovery</span>
+                    <h3>Scholarship Matcher</h3>
+                    <p class="prompt-desc">Find matching scholarships based on your profile.</p>
+                    <div class="prompt-snippet" id="prompt-1">"Act as a university admissions counselor. I am looking for fully-funded master's scholarships in [Field] in [Country]. My GPA is [GPA]. Provide a list of 5 high-probability scholarships with links."</div>
+                    <button class="btn btn-glass btn-copy mt-auto" onclick="copyPrompt('prompt-1', this)"><i class="fa-regular fa-copy"></i> Copy Prompt</button>
+                </div>
+
+                <div class="glass-card prompt-card fancy-hover" data-category="documents">
+                    <span class="category-badge badge-documents">Documents</span>
+                    <h3>SOP Reviewer</h3>
+                    <p class="prompt-desc">Get rigorous feedback on your Statement of Purpose.</p>
+                    <div class="prompt-snippet" id="prompt-2">"Act as a strict admissions committee member for a top [Field] program. Review my Statement of Purpose below. Point out weak arguments, suggest structural improvements, and rate it out of 10. \n\n[Paste SOP]"</div>
+                    <button class="btn btn-glass btn-copy mt-auto" onclick="copyPrompt('prompt-2', this)"><i class="fa-regular fa-copy"></i> Copy Prompt</button>
+                </div>
+
+                <div class="glass-card prompt-card fancy-hover" data-category="outreach">
+                    <span class="category-badge badge-outreach">Outreach</span>
+                    <h3>Professor Cold Email</h3>
+                    <p class="prompt-desc">Craft a compelling email for supervision.</p>
+                    <div class="prompt-snippet" id="prompt-3">"Help me write a persuasive 150-word cold email to Professor [Name] at [University]. Their recent paper on [Topic] fascinated me. I want to convey my interest in joining their lab as a PhD student."</div>
+                    <button class="btn btn-glass btn-copy mt-auto" onclick="copyPrompt('prompt-3', this)"><i class="fa-regular fa-copy"></i> Copy Prompt</button>
+                </div>
+
+                <div class="glass-card prompt-card fancy-hover" data-category="outreach">
+                    <span class="category-badge badge-interview">Interview</span>
+                    <h3>Mock Interviewer</h3>
+                    <p class="prompt-desc">Practice answering tough scholarship questions.</p>
+                    <div class="prompt-snippet" id="prompt-4">"Act as the scholarship interview panel for [Scholarship Name]. Ask me one common interview question at a time. Wait for my answer, then provide critical feedback before moving to the next question."</div>
+                    <button class="btn btn-glass btn-copy mt-auto" onclick="copyPrompt('prompt-4', this)"><i class="fa-regular fa-copy"></i> Copy Prompt</button>
+                </div>
+
+                <div class="glass-card prompt-card fancy-hover" data-category="documents">
+                    <span class="category-badge badge-documents">Documents</span>
+                    <h3>CV Optimizer</h3>
+                    <p class="prompt-desc">Make your CV punchy and ATS compliant.</p>
+                    <div class="prompt-snippet" id="prompt-5">"I am applying for a [Degree] in [Field]. Here is my current CV: [Paste CV]. Please rewrite my bullet points using strong action verbs, quantify my achievements, and ensure it highlights my research potential."</div>
+                    <button class="btn btn-glass btn-copy mt-auto" onclick="copyPrompt('prompt-5', this)"><i class="fa-regular fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Step 3: Chatbot -->
+    <section id="ai-chatbot" class="section">
+        <div class="container reveal fade-up">
+            <div class="section-header">
+                <h2 class="section-title">Step 3: AI Assistant</h2>
+                <p class="section-desc">Interactive guidance on documents, platforms, and networking.</p>
+            </div>
+            
+            <div class="chat-container glass-card p-0">
+                <div class="chat-header p-4 flex-left">
+                    <div class="bot-avatar gradient-bg flex-center"><i class="fa-solid fa-robot text-white"></i></div>
+                    <div class="ml-3">
+                        <h4 class="mb-0 text-dark font-poppins">ScholarBot</h4>
+                        <span class="status-online"><span class="dot-online"></span> Support Online</span>
+                    </div>
+                </div>
+                <div class="chat-box p-4 scrollbar" id="chat-box">
+                    <div class="message-wrapper bot">
+                        <div class="message bot-message glass-msg">
+                            Hello! 👋 I'm your integrated guide. Ask me about CVs, SOPs, LORs, networking, or finding platforms. Try typing "SOP".
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input-area p-3 border-top">
+                    <input type="text" id="chat-input" class="glass-input" placeholder="Message ScholarBot...">
+                    <button id="send-chat" class="btn btn-primary gradient-btn btn-circle shadow-glow" aria-label="Send"><i class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Step 4: Tracker -->
+    <section id="tracker" class="section bg-alt-grad pattern-bg">
+        <div class="container reveal fade-up">
+            <div class="section-header">
+                <h2 class="section-title">Step 4: Application Tracker</h2>
+                <p class="section-desc">Monitor your target scopes in an integrated dashboard.</p>
+            </div>
+            
+            <div class="glass-card tracker-wrapper p-6">
+                <div class="tracker-controls grid-3 mb-5">
+                    <input type="text" id="newA-name" class="glass-input" placeholder="Scholarship Name">
+                    <input type="text" id="newA-country" class="glass-input" placeholder="Country">
+                    <div class="flex-left gap-3">
+                        <div class="select-wrapper w-full">
+                            <select id="newA-status" class="glass-input">
+                                <option value="Planned">Planned</option>
+                                <option value="Applied">Applied</option>
+                                <option value="Completed">Completed</option>
+                            </select>
+                            <i class="fa-solid fa-chevron-down select-icon"></i>
+                        </div>
+                        <button id="add-tracker-btn" class="btn btn-primary gradient-btn shadow-glow px-4"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table id="tracker-table" class="modern-table w-full">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Country</th>
+                                <th>Status</th>
+                                <th class="text-right">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tracker-body">
+                            <!-- JS Inject -->
+                        </tbody>
+                    </table>
+                    <div id="empty-state" class="empty-state text-center p-5">
+                        <div class="empty-icon blob-bg flex-center mx-auto mb-3"><i class="fa-regular fa-folder-open"></i></div>
+                        <p class="text-muted">No applications tracked. Start organizing your journey.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Step 5, 6, 7: Resources & Templates -->
+    <section id="resources-templates" class="section">
+        <div class="container reveal fade-up">
+            <div class="grid-3">
+                <!-- Resources -->
+                <div class="glass-card fancy-hover p-5 card-feature">
+                    <div class="card-icon gradient-bg text-white"><i class="fa-solid fa-globe"></i></div>
+                    <h2 class="card-title text-dark">Step 5: Platforms</h2>
+                    <ul class="clean-list mt-4">
+                        <li><a href="https://www.daad.de" target="_blank" class="hover-link">DAAD (Germany) <i class="fa-solid fa-arrow-up-right-from-square small-icon"></i></a></li>
+                        <li><a href="https://www.chevening.org" target="_blank" class="hover-link">Chevening (UK) <i class="fa-solid fa-arrow-up-right-from-square small-icon"></i></a></li>
+                        <li><a href="https://us.fulbrightonline.org/" target="_blank" class="hover-link">Fulbright (USA) <i class="fa-solid fa-arrow-up-right-from-square small-icon"></i></a></li>
+                        <li><a href="https://erasmus-plus.ec.europa.eu/" target="_blank" class="hover-link">Erasmus+ (EU) <i class="fa-solid fa-arrow-up-right-from-square small-icon"></i></a></li>
+                        <li><a href="https://www.scholars4dev.com/" target="_blank" class="hover-link">Scholars4Dev <i class="fa-solid fa-arrow-up-right-from-square small-icon"></i></a></li>
+                    </ul>
+                </div>
+
+                <!-- Tools -->
+                <div class="glass-card fancy-hover p-5 card-feature">
+                    <div class="card-icon gradient-bg text-white"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h2 class="card-title text-dark">Step 6: AI Tools</h2>
+                    <ul class="clean-list mt-4">
+                        <li><a href="https://chat.openai.com/" target="_blank" class="hover-link">ChatGPT <i class="fa-solid fa-arrow-up-right-from-square small-icon"></i></a></li>
+                        <li><a href="https://claude.ai/" target="_blank" class="hover-link">Claude <i class="fa-solid fa-arrow-up-right-from-square small-icon"></i></a></li>
+                        <li><a href="https://www.grammarly.com/" target="_blank" class="hover-link">Grammarly <i class="fa-solid fa-arrow-up-right-from-square small-icon"></i></a></li>
+                        <li><a href="https://resume.io/" target="_blank" class="hover-link">Resume.io <i class="fa-solid fa-arrow-up-right-from-square small-icon"></i></a></li>
+                        <li><a href="https://hemingwayapp.com/" target="_blank" class="hover-link">Hemingway Editor <i class="fa-solid fa-arrow-up-right-from-square small-icon"></i></a></li>
+                    </ul>
+                </div>
+
+                <!-- Templates -->
+                <div class="glass-card fancy-hover p-5 card-feature">
+                    <div class="card-icon gradient-bg text-white"><i class="fa-solid fa-file-arrow-down"></i></div>
+                    <h2 class="card-title text-dark">Step 7: Templates</h2>
+                    <ul class="clean-list mt-4">
+                        <li><button class="hover-link dl-link" onclick="downloadTemplate('cvContent', 'CV_Template.txt', event)">Academic CV/Resume <i class="fa-solid fa-download small-icon"></i></button></li>
+                        <li><button class="hover-link dl-link" onclick="downloadTemplate('sopContent', 'SOP_Template.txt', event)">Statement of Purpose <i class="fa-solid fa-download small-icon"></i></button></li>
+                        <li><button class="hover-link dl-link" onclick="downloadTemplate('lorContent', 'LOR_Template.txt', event)">Recommendation Letter <i class="fa-solid fa-download small-icon"></i></button></li>
+                        <li><button class="hover-link dl-link" onclick="downloadTemplate('transcriptContent', 'Transcript_Guide.txt', event)">Official Transcripts <i class="fa-solid fa-download small-icon"></i></button></li>
+                        <li><button class="hover-link dl-link" onclick="downloadTemplate('englishContent', 'English_Tests_Guide.txt', event)">English Test Scores <i class="fa-solid fa-download small-icon"></i></button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="sao-footer section pb-4">
+        <div class="container relative">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3 class="gradient-text"><i class="fa-solid fa-graduation-cap"></i> ScholarAI</h3>
+                    <p class="text-muted mt-3">Designed to be your premium roadmap to global scholarships. Transforming aspirations into academic achievements.</p>
+                </div>
+                <div class="footer-credits">
+                    <h4 class="text-dark">Developed & Designed By</h4>
+                    <p class="creators mt-2">Sindhi Faraz Ahmed &amp; Toheed Ahmed</p>
+                    <div class="social-pills mt-4 flex-left gap-3">
+                        <a href="mailto:fk091376@gmail.com" class="social-pill pill-email"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="https://www.linkedin.com/in/farazahmed-civil/" target="_blank" class="social-pill pill-linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/ahmed_faraz011/" target="_blank" class="social-pill pill-instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/fraz.ahmed.1253236" target="_blank" class="social-pill pill-facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom mt-5 pt-4 text-center border-top">
+                <p class="text-muted text-sm">&copy; 2026 Scholarship Hunt by AI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Hidden Storage for Document Templates -->
+    <div id="template-storage" style="display: none;">
+        <textarea id="cvContent">
+# ACADEMIC CV/RESUME TEMPLATE
+[Your Full Name]
+[Your Address]
+[Email] | [Phone] | [LinkedIn Profile Link]
+
+# PROFESSIONAL SUMMARY
+Highly motivated and dedicated [Field] graduate seeking a [Master's/PhD] scholarship to further develop my research skills and contribute to [Area of Interest].
+
+# EDUCATION
+[Degree Name] in [Major/Field]
+[University Name], [City, Country] | [Start Year] - [End Year]
+- CGPA: [Your GPA] / [Max GPA]
+
+# RESEARCH & PROJECTS
+[Project Title]
+[Role/Position], [Institution/Organization]
+- [Description of contribution, methodology, and outcome].
+
+# SKILLS
+- Technical: [Skill 1, Skill 2]
+- Languages: [English (IELTS), Native Language]
+        </textarea>
+        <textarea id="sopContent">
+STATEMENT OF PURPOSE
+[Your Name]
+[Date]
+
+Dear Members of the Admissions Committee,
+
+I am writing to express my strong interest in the [Program Name] program at [University Name]. As a graduate of [University] with a degree in [Field], I am eager to advance my knowledge in [Area of Study].
+
+[Introduction - Hook the reader]
+[Academic Background]
+[Professional/Research Experience]
+[Why this University?]
+[Future Goals]
+
+Thank you for considering my application.
+
+Sincerely,
+[Your Name]
+        </textarea>
+        <textarea id="lorContent">
+Subject: Prospective [Master's/PhD] Student Inquiry - [Your Name]
+
+Dear Professor [Professor's Last Name],
+
+My name is [Your Name] and I recently graduated with a degree in [Field] from [University]. I am writing to express my interest in joining your research group.
+
+I have been following your recent work closely, particularly your publication on "[Title of a Recent Paper]". It strongly aligns with my own research interests in [Your Research Area]. 
+
+I have attached my academic CV and transcripts. I would be incredibly grateful for a brief chat regarding any open positions.
+
+Best regards,
+[Your Name]
+        </textarea>
+        <textarea id="transcriptContent">
+ACADEMIC TRANSCRIPT PREPARATION GUIDE
+
+1. WHAT IS IT?
+An official document from your university listing all courses and grades.
+
+2. HOW TO OBTAIN IT:
+Request it from your university's administrative or registrar office. Maintain both digital and physical copies.
+
+3. CHECKLIST:
+- [ ] Stamped and signed by registrar.
+- [ ] Grading scale explanation included.
+- [ ] High-quality color scan saved as PDF (under 2MB).
+- [ ] Officially translated to English if originally in another language.
+        </textarea>
+        <textarea id="englishContent">
+ENGLISH PROFICIENCY TESTS GUIDE
+
+1. IELTS:
+- Minimum overall band 6.5 (no sub-band below 6.0) required for most master's.
+- Validity: 2 Years.
+
+2. TOEFL iBT:
+- Requirement: 80 to 90+.
+- Validity: 2 Years.
+
+3. ENGLISH PROFICIENCY CERTIFICATE (EPC):
+- A letter from your previous university stating your degree was taught entirely in English. Accepted widely in Europe/Asia in place of IELTS. (Always verify first!)
+        </textarea>
+    </div>
+
+    <!-- JS Logic -->
+    <!-- SweetAlert2 placeholder - using native alerts for strict offline, but UI is upgraded natively in JS -->
+    <div id="toast-container"></div>
+    <script src="script.js"></script>
+</body>
+</html>
