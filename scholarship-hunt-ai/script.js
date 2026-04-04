@@ -309,21 +309,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    window.downloadTemplate = function(elementId, filename, e) {
-        if(e) e.preventDefault();
-        const textArea = document.getElementById(elementId);
-        if(!textArea) return;
-        const blob = new Blob([textArea.value], { type: 'text/plain;charset=utf-8' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = filename;
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
-        showToast('Download Started: ' + filename);
-    };
+
 
     function showToast(message) {
         const t = document.createElement('div');

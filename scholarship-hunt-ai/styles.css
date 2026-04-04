@@ -309,6 +309,10 @@ button, input, select { font-family: inherit; }
 .hover-link { display: flex; justify-content: space-between; align-items: center; font-weight: 600; color: var(--text-main); font-size: 1.05rem; background: transparent; border: none; width: 100%; cursor: pointer; font-family: inherit;}
 .hover-link:hover { color: var(--primary); transform: translateX(5px); }
 .small-icon { font-size: 0.85rem; opacity: 0.5; transition: var(--transition); }
+.template-group h4 { font-size: 0.95rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+.template-group { border-bottom: 1px dashed var(--border-color); padding-bottom: 16px; margin-bottom: 16px; }
+.template-group:last-child { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
+.text-primary { color: var(--primary) !important; }
 .hover-link:hover .small-icon { opacity: 1; color: var(--primary); transform: translate(2px, -2px); }
 
 /* FOOTER */

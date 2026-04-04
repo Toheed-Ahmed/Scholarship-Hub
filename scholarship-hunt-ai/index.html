@@ -410,16 +410,39 @@
                 </div>
 
                 <!-- Templates -->
-                <div class="glass-card fancy-hover p-5 card-feature">
-                    <div class="card-icon gradient-bg text-white"><i class="fa-solid fa-file-arrow-down"></i></div>
+                <div class="glass-card fancy-hover p-5 card-feature" style="max-height: 500px; overflow-y: auto;">
+                    <div class="card-icon gradient-bg text-white"><i class="fa-solid fa-file-pdf"></i></div>
                     <h2 class="card-title text-dark">Step 7: Templates</h2>
-                    <ul class="clean-list mt-4">
-                        <li><button class="hover-link dl-link" onclick="downloadTemplate('cvContent', 'CV_Template.txt', event)">Academic CV/Resume <i class="fa-solid fa-download small-icon"></i></button></li>
-                        <li><button class="hover-link dl-link" onclick="downloadTemplate('sopContent', 'SOP_Template.txt', event)">Statement of Purpose <i class="fa-solid fa-download small-icon"></i></button></li>
-                        <li><button class="hover-link dl-link" onclick="downloadTemplate('lorContent', 'LOR_Template.txt', event)">Recommendation Letter <i class="fa-solid fa-download small-icon"></i></button></li>
-                        <li><button class="hover-link dl-link" onclick="downloadTemplate('transcriptContent', 'Transcript_Guide.txt', event)">Official Transcripts <i class="fa-solid fa-download small-icon"></i></button></li>
-                        <li><button class="hover-link dl-link" onclick="downloadTemplate('englishContent', 'English_Tests_Guide.txt', event)">English Test Scores <i class="fa-solid fa-download small-icon"></i></button></li>
-                    </ul>
+                    
+                    <div class="template-group mt-4">
+                        <h4 class="text-primary mb-2"><i class="fa-solid fa-briefcase"></i> CV Templates</h4>
+                        <ul class="clean-list">
+                            <li><a href="templates/CV_Europass_Masters_04_Carlos.pdf" target="_blank" class="hover-link dl-link">📄 Download Europass Masters <i class="fa-solid fa-download small-icon"></i></a></li>
+                            <li><a href="templates/CV_Europass_PhD_05_Dr..pdf" target="_blank" class="hover-link dl-link">📄 Download Europass PhD <i class="fa-solid fa-download small-icon"></i></a></li>
+                            <li><a href="templates/CV_General_Bachelor_01_Alexandra.pdf" target="_blank" class="hover-link dl-link">📄 Download General Bachelor <i class="fa-solid fa-download small-icon"></i></a></li>
+                            <li><a href="templates/CV_General_Masters_03_Priya.pdf" target="_blank" class="hover-link dl-link">📄 Download General Masters <i class="fa-solid fa-download small-icon"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="template-group mt-4">
+                        <h4 class="text-primary mb-2"><i class="fa-solid fa-pen-nib"></i> SOP Templates</h4>
+                        <ul class="clean-list">
+                            <li><a href="templates/SOP_Bachelor_Sample_1_Alexandra_Mensa.pdf" target="_blank" class="hover-link dl-link">📄 Download Bachelor Sample 1 <i class="fa-solid fa-download small-icon"></i></a></li>
+                            <li><a href="templates/SOP_Bachelor_Sample_2_Fatima_Al-Rashi.pdf" target="_blank" class="hover-link dl-link">📄 Download Bachelor Sample 2 <i class="fa-solid fa-download small-icon"></i></a></li>
+                            <li><a href="templates/SOP_Masters_Sample_1_Yuki_Tanaka.pdf" target="_blank" class="hover-link dl-link">📄 Download Masters Sample 1 <i class="fa-solid fa-download small-icon"></i></a></li>
+                            <li><a href="templates/SOP_Masters_Sample_2_Amina_Ibrahim.pdf" target="_blank" class="hover-link dl-link">📄 Download Masters Sample 2 <i class="fa-solid fa-download small-icon"></i></a></li>
+                            <li><a href="templates/SOP_PhD_Sample_1_Dr._Elan_Moreau.pdf" target="_blank" class="hover-link dl-link">📄 Download PhD Sample 1 <i class="fa-solid fa-download small-icon"></i></a></li>
+                            <li><a href="templates/SOP_PhD_Sample_2_Seo-Yeon_Park.pdf" target="_blank" class="hover-link dl-link">📄 Download PhD Sample 2 <i class="fa-solid fa-download small-icon"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="template-group mt-4">
+                        <h4 class="text-primary mb-2"><i class="fa-solid fa-envelope-open-text"></i> LOR & English Tests</h4>
+                        <ul class="clean-list">
+                            <li><a href="templates/RecommendationLetter_Masters_Sample_1_Ms_Yuki_Tanaka.pdf" target="_blank" class="hover-link dl-link">📄 Download Recommendation Letter <i class="fa-solid fa-download small-icon"></i></a></li>
+                            <li><a href="templates/EnglishTestScores_Bachelor_Sample_1_Alexandra_Mensa.pdf" target="_blank" class="hover-link dl-link">📄 Download English Test Scores <i class="fa-solid fa-download small-icon"></i></a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -450,95 +473,7 @@
         </div>
     </footer>
 
-    <!-- Hidden Storage for Document Templates -->
-    <div id="template-storage" style="display: none;">
-        <textarea id="cvContent">
-# ACADEMIC CV/RESUME TEMPLATE
-[Your Full Name]
-[Your Address]
-[Email] | [Phone] | [LinkedIn Profile Link]
 
-# PROFESSIONAL SUMMARY
-Highly motivated and dedicated [Field] graduate seeking a [Master's/PhD] scholarship to further develop my research skills and contribute to [Area of Interest].
-
-# EDUCATION
-[Degree Name] in [Major/Field]
-[University Name], [City, Country] | [Start Year] - [End Year]
-- CGPA: [Your GPA] / [Max GPA]
-
-# RESEARCH & PROJECTS
-[Project Title]
-[Role/Position], [Institution/Organization]
-- [Description of contribution, methodology, and outcome].
-
-# SKILLS
-- Technical: [Skill 1, Skill 2]
-- Languages: [English (IELTS), Native Language]
-        </textarea>
-        <textarea id="sopContent">
-STATEMENT OF PURPOSE
-[Your Name]
-[Date]
-
-Dear Members of the Admissions Committee,
-
-I am writing to express my strong interest in the [Program Name] program at [University Name]. As a graduate of [University] with a degree in [Field], I am eager to advance my knowledge in [Area of Study].
-
-[Introduction - Hook the reader]
-[Academic Background]
-[Professional/Research Experience]
-[Why this University?]
-[Future Goals]
-
-Thank you for considering my application.
-
-Sincerely,
-[Your Name]
-        </textarea>
-        <textarea id="lorContent">
-Subject: Prospective [Master's/PhD] Student Inquiry - [Your Name]
-
-Dear Professor [Professor's Last Name],
-
-My name is [Your Name] and I recently graduated with a degree in [Field] from [University]. I am writing to express my interest in joining your research group.
-
-I have been following your recent work closely, particularly your publication on "[Title of a Recent Paper]". It strongly aligns with my own research interests in [Your Research Area]. 
-
-I have attached my academic CV and transcripts. I would be incredibly grateful for a brief chat regarding any open positions.
-
-Best regards,
-[Your Name]
-        </textarea>
-        <textarea id="transcriptContent">
-ACADEMIC TRANSCRIPT PREPARATION GUIDE
-
-1. WHAT IS IT?
-An official document from your university listing all courses and grades.
-
-2. HOW TO OBTAIN IT:
-Request it from your university's administrative or registrar office. Maintain both digital and physical copies.
-
-3. CHECKLIST:
-- [ ] Stamped and signed by registrar.
-- [ ] Grading scale explanation included.
-- [ ] High-quality color scan saved as PDF (under 2MB).
-- [ ] Officially translated to English if originally in another language.
-        </textarea>
-        <textarea id="englishContent">
-ENGLISH PROFICIENCY TESTS GUIDE
-
-1. IELTS:
-- Minimum overall band 6.5 (no sub-band below 6.0) required for most master's.
-- Validity: 2 Years.
-
-2. TOEFL iBT:
-- Requirement: 80 to 90+.
-- Validity: 2 Years.
-
-3. ENGLISH PROFICIENCY CERTIFICATE (EPC):
-- A letter from your previous university stating your degree was taught entirely in English. Accepted widely in Europe/Asia in place of IELTS. (Always verify first!)
-        </textarea>
-    </div>
 
     <!-- JS Logic -->
     <!-- SweetAlert2 placeholder - using native alerts for strict offline, but UI is upgraded natively in JS -->
