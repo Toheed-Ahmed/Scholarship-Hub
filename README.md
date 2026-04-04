@@ -1,5 +1,7 @@
 # 🎓 Scholarship Hunt by AI
 
+**🔗 Live Demo:** [https://scholarship-6637pvsda-myhosts-projects.vercel.app/](https://scholarship-6637pvsda-myhosts-projects.vercel.app/)
+
 **Scholarship Hunt by AI** is a premium, fully responsive, zero-database guidance platform designed to help students worldwide navigate the complex process of securing fully-funded Master's and PhD scholarships. 
 
 Built with modern SaaS aesthetics and Human-Computer Interaction (HCI) best practices, this platform serves as an interactive, step-by-step roadmap offering integrated AI prompts, application tracking, and automated document templates.
@@ -28,15 +30,15 @@ A complete CRUD dashboard allowing students to log, monitor, and delete active s
 ### 5. Essential Resources & AI Tools Hub
 Curated quick-links to top global scholarship portals (DAAD, Chevening, Fulbright, Erasmus+) alongside essential AI writing tools (Grammarly, Hemingway, Resume.io).
 
-### 6. Fully Offline Template Generator
-Generate professional, downloadable `.txt` templates for CVs, SOPs, Recommendation Letters, and English Guides. Uses a pure **JavaScript Blob Architecture** enabling instantaneous, secure downloads without requiring any server infrastructure.
+### 6. Curated PDF Templates
+Access a categorized library of professionally formatted `.pdf` templates for CVs, SOPs, Recommendation Letters, and English Guides. Neatly organized for instantaneous, direct, cross-platform downloads.
 
 ---
 
 ## 💻 Tech Stack
 * **HTML5** - Semantic structure and accessibility.
 * **Vanilla CSS3** - Custom CSS Grid/Flexbox architecture, CSS Variables, Glassmorphism UI, Intersection Observers, and strict Mobile-First Breakpoints (Zero UI frameworks).
-* **Vanilla JavaScript (ES6)** - Handles DOM manipulation, LocalStorage sync, Blob file generation, intersection scroll animations, and Chatbot logic logic.
+* **Vanilla JavaScript (ES6)** - Handles DOM manipulation, LocalStorage sync, intersection scroll animations, and Chatbot logic.
 
 ---
 
